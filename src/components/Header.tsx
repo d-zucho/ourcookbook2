@@ -1,0 +1,56 @@
+'use client'
+import { ChevronDown, Menu } from 'lucide-react'
+import MaxWidthWrapper from './MaxWidthWrapper'
+import { useMediaQuery } from 'usehooks-ts'
+import { Button, buttonVariants } from './ui/button'
+import Link from 'next/link'
+import MobileNav from './MobileNav'
+import Nav from './Nav'
+
+const Header = () => {
+  return (
+    <header className='shadow border-b-2 py-4'>
+      <MaxWidthWrapper className='flex-between'>
+        {/* right */}
+        <div className='flex-center gap-10'>
+          <div>
+            <Link href='/'>
+              <img src={'/logoOC.svg'} alt='' className='w-[60px]' />
+            </Link>
+          </div>
+
+          <div className='flex-between'>
+            <div className='flex-center gap-1'>
+              <Link href={'/'} className={buttonVariants({ variant: 'ghost' })}>
+                <span>Explore Categories</span>
+                <ChevronDown size={20} className='flex-shrink-0' />
+              </Link>
+            </div>
+            <div className='flex-center gap-1'>
+              <Link
+                href='/featured'
+                className={buttonVariants({ variant: 'ghost' })}
+              >
+                <span>Featured</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* left */}
+        {/* TODO: replace with Mobile nav (sheet) */}
+        <div className='lg:hidden'>
+          <MobileNav />
+        </div>
+        <div className='hidden lg:block'>
+          <Button className='btn'>Sign In</Button>
+          <Button className='btn' variant={'ghost'}>
+            Join Now
+          </Button>
+        </div>
+      </MaxWidthWrapper>
+    </header>
+  )
+}
+
+export default Header

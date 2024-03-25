@@ -1,6 +1,15 @@
 'use client'
 import { Menu } from 'lucide-react'
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from './ui/sheet'
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from './ui/sheet'
+import Link from 'next/link'
+import { buttonVariants } from './ui/button'
+import { Separator } from './ui/separator'
 
 const MobileNav = () => {
   return (
@@ -13,8 +22,17 @@ const MobileNav = () => {
         </SheetTrigger>
         <SheetContent className='x max-w-[400px]'>
           <SheetHeader>
-            <h3>Welcome to ourCookbook!</h3>
+            <SheetTitle>Welcome to ourCookbook!</SheetTitle>
           </SheetHeader>
+          <div className='flex flex-col'>
+            <Separator />
+            <Link href='/' className={buttonVariants({ variant: 'ghost' })}>
+              Sign In
+            </Link>
+            <Link href='/' className={buttonVariants()}>
+              Join Now
+            </Link>
+          </div>
         </SheetContent>
       </Sheet>
     </>

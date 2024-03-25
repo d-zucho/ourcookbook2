@@ -9,7 +9,7 @@ import Nav from './Nav'
 
 const Header = () => {
   return (
-    <header className='shadow border-b-2 py-4'>
+    <header className='shadow border-b-2 py-4 sticky inset-0 bg-white'>
       <MaxWidthWrapper className='flex-between'>
         {/* right */}
         <div className='flex-center gap-10'>
@@ -42,9 +42,9 @@ const Header = () => {
         <div className='lg:hidden'>
           <MobileNav />
         </div>
-        <div className='hidden lg:block'>
+        <div className='hidden lg:block space-x-4'>
           <Button className='btn'>Sign In</Button>
-          <Button className='btn' variant={'ghost'}>
+          <Button className='btn' variant={'outline'}>
             Join Now
           </Button>
         </div>

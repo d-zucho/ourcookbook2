@@ -9,7 +9,7 @@ import Nav from './Nav'
 
 const Header = () => {
   return (
-    <header className='shadow border-b-2 py-4 sticky inset-0 bg-white'>
+    <header className='shadow border-b-2 py-4  sticky top-0 bg-white'>
       <MaxWidthWrapper className='flex-between'>
         {/* right */}
         <div className='flex-center gap-10'>

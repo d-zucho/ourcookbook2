@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className='shadow border-b-2 py-4  sticky top-0 bg-white'>
       <MaxWidthWrapper className='flex-between'>
-        {/* right */}
+        {/* left */}
         <div className='flex-center gap-10'>
           <div>
             <Link href='/'>
@@ -19,7 +19,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className='flex-between'>
+          <div className='hidden lg:flex-between'>
             <div className='flex-center gap-1'>
               <Link href={'/'} className={buttonVariants({ variant: 'ghost' })}>
                 <span>Explore Categories</span>
@@ -37,7 +37,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* left */}
+        {/* right */}
         {/* TODO: replace with Mobile nav (sheet) */}
         <div className='lg:hidden'>
           <MobileNav />

@@ -20,3 +20,5 @@ export const CONNECT_FACTS: connectFact[] = [
       'Connect with like-minded food lovers and explore a world of mouthwatering recipes.',
   },
 ]
+
+// export const IMAGES ......
